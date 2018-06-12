@@ -41,7 +41,7 @@
   * **Code:** 400  
     **Status:** BadRequest  
     **Message:** error  
-    **Response:**  
+    **Response:**
     `{
             errorCode : 404,
             errorMessage: "Record not found"
@@ -96,7 +96,7 @@ Creates a new user.
   * **Code:** 400  
     **Status:** Bad  
     **Message:** error  
-    **Response:**   
+    **Response:** 
     `{
             errorCode : 404,
             errorMessage: "DB exception thrown"
@@ -152,7 +152,7 @@ Deletes the specified user from the database.
   * **Code:** 400  
     **Status:** Bad  
     **Message:** error  
-    **Response:**  
+    **Response:**
       `{
             errorCode : 404,
             errorMessage: "DB exception thrown"
@@ -208,7 +208,7 @@ Updates the user information.
   * **Code:** 400  
     **Status:** Bad  
     **Message:** error  
-    **Response:**  
+    **Response:**
     `{
             errorCode : 404,
             errorMessage: "DB exception thrown"
@@ -265,7 +265,7 @@ Creates a reservervation between a host user and others users.
   * **Code:** 400  
     **Status:** Bad  
     **Message:** error  
-    **Response:**  
+    **Response:**
     `{
             errorCode : 404,
             errorMessage: "Unabled to create reservation, user is not host"
@@ -275,7 +275,7 @@ Creates a reservervation between a host user and others users.
   * **Code:** 400  
     **Status:** Bad  
     **Message:** error  
-    **Response:**  
+    **Response:**
     `{
             errorCode : 404,
             errorMessage: "Unabled to create reservation without guests"
@@ -361,7 +361,7 @@ Returns json data about the guests related to the user.
   * **Code:** 400  
     **Status:** Bad  
     **Message:** error  
-    **Response:**  
+    **Response:**
     `{
             errorCode : 400,
             errorMessage: "Unabled to find reservations for the user"
@@ -407,7 +407,7 @@ Returns json data about the guests related to the user.
   * **Code:** 400  
     **Status:** Bad  
     **Message:** error  
-    **Response:**  
+    **Response:**
     `{
             errorCode : 400,
             errorMessage: "Unabled to delete reservations, user do not have reservations"
@@ -452,7 +452,7 @@ Returns json data about the guests related to the user.
   * **Code:** 400  
     **Status:** Bad  
     **Message:** error  
-    **Response:**  
+    **Response:**
     `{
             errorCode : 400,
             errorMessage: "Unabled to find reservations for the user"
