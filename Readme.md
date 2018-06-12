@@ -1,26 +1,27 @@
 **Show User** 
 ---
----
+
   Returns json data about a single user.
 
-* **URL**
-&emsp;api/users/:uid
+* **URL**  
+    &emsp;api/users/:uid
 
-* **Method:**
-&emsp;`GET`
+* **Method:**  
+    &emsp;`GET`
   
-*  **URL Params**
-   &emsp;**Required:**
+*  **URL Params**  
+    &emsp;**Required:**  
     &emsp;&emsp;`id=[integer]`
 
-* **Data Params**
+* **Data Params**  
   &emsp;None
 
-* **Success Response:**
-    * **Code:** 200
-    **Status:** OK
-    **Message:** Success
-    **Response:** `{   
+* **Success Response:**  
+    * **Code:** 200  
+    **Status:** OK  
+    **Message:** Success  
+    **Response:**  
+      `{   
             id : 12, 
             first_name : "Carlos",
             last_name : "Garcia", 
@@ -37,10 +38,11 @@
  
 * **Error Response:**
 
-  * **Code:** 400
-    **Status:** BadRequest
-    **Message:** error
-    **Response:**`{
+  * **Code:** 400  
+    **Status:** BadRequest  
+    **Message:** error  
+    **Response:**  
+    `{
             errorCode : 404,
             errorMessage: "Record not found"
         }`
@@ -59,42 +61,43 @@
 
 **Create User**
 ----
----
+
 Creates a new user.
   
-* **URL**
+* **URL**  
     &emsp;api/users
 
-* **Method:**
+* **Method:**  
 &emsp;`POST`
   
-*  **URL Params**
+*  **URL Params**  
    &emsp;None
 
-* **Data Params**
-    &emsp;**Required:** 
-    &emsp;&emsp;`email = [string]`\
-    &emsp;&emsp;`first_name = [string]`
-    &emsp;&emsp;`last_name = [string]`
-    &emsp;&emsp;`name = [string]`
-    &emsp;&emsp;`is_host = [boolean]`
-    &emsp;&emsp;`date_of_bith = [date]`
-    &emsp;&emsp;`latitude = [decimal]`
-    &emsp;&emsp;`longitude = [decimal]`
+* **Data Params**  
+    &emsp;**Required:**   
+    &emsp;&emsp;`email = [string]`  
+    &emsp;&emsp;`first_name = [string]`  
+    &emsp;&emsp;`last_name = [string]`  
+    &emsp;&emsp;`name = [string]`  
+    &emsp;&emsp;`is_host = [boolean]`  
+    &emsp;&emsp;`date_of_bith = [date]`  
+    &emsp;&emsp;`latitude = [decimal]`  
+    &emsp;&emsp;`longitude = [decimal]`  
 
 * **Success Response:**
 
-  * **Code:** 200
-    **Status:** OK
-    **Message:** Success
-    **Response:** true
+  * **Code:** 200  
+    **Status:** OK  
+    **Message:** Success  
+    **Response:** true  
 
 * **Error Response:**
 
-  * **Code:** 400
-    **Status:** Bad
-    **Message:** error
-    **Response:**: `{
+  * **Code:** 400  
+    **Status:** Bad  
+    **Message:** error  
+    **Response:**   
+    `{
             errorCode : 404,
             errorMessage: "DB exception thrown"
         }`
@@ -108,12 +111,12 @@ Creates a new user.
         dataType: "json",
         data:{
             "email":"test2@company1.com",
-	        "name":"John \"Johnnie\" Doe",
-	        "first_name":"John",
-	        "last_name":"Doe Curtis",
-	        "is_host":false,
-	        "date_of_birth":"1979-06-09"
-	    },
+            "name":"John \"Johnnie\" Doe",
+            "first_name":"John",
+            "last_name":"Doe Curtis",
+            "is_host":false,
+            "date_of_birth":"1979-06-09"
+        },
         success: function(r) { console.log(r); },
     });
     ```
@@ -121,35 +124,36 @@ Creates a new user.
 
 **Delete User**
 ----
----
+
 Deletes the specified user from the database.
   
-* **URL**
+* **URL**  
     &emsp;api/users/:uid
 
-* **Method:**
+* **Method:**  
 &emsp;`DELETE`
   
-*  **URL Params**
-   &emsp;**Required:**
+*  **URL Params**  
+   &emsp;**Required:**  
         &emsp;&emsp;`id=[integer]`
 
-* **Data Params**
+* **Data Params**  
     &emsp;None
 
 * **Success Response:**
 
-  * **Code:** 200
-    **Status:** OK
-    **Message:** Success
-    **Response:** true
+  * **Code:** 200  
+    **Status:** OK  
+    **Message:** Success  
+    **Response:** true  
 
 * **Error Response:**
 
-  * **Code:** 400
-    **Status:** Bad
-    **Message:** error
-    **Response:**: `{
+  * **Code:** 400  
+    **Status:** Bad  
+    **Message:** error  
+    **Response:**  
+      `{
             errorCode : 404,
             errorMessage: "DB exception thrown"
         }`
@@ -168,43 +172,44 @@ Deletes the specified user from the database.
 
 **Update User**
 ----
----
+
 Updates the user information.
   
-* **URL**
+* **URL**  
     &emsp;api/users/:uid
 
-* **Method:**
+* **Method:**  
 &emsp;`PUT | PATCH`
   
-*  **URL Params**
-   &emsp;**Required:**
+*  **URL Params**  
+   &emsp;**Required:**  
     &emsp;&emsp;`id=[integer]`
 
-* **Data Params**
-    &emsp;**Optional:**
-        &emsp;&emsp;`email = [string]`
-        &emsp;&emsp;`first_name = [string]`
-        &emsp;&emsp;`last_name = [string]`
-        &emsp;&emsp;`name = [string]`
-        &emsp;&emsp;`is_host = [boolean]`
-        &emsp;&emsp;`date_of_bith = [date]`
-        &emsp;&emsp;`latitude = [decimal]`
+* **Data Params**  
+    &emsp;**Optional:**  
+        &emsp;&emsp;`email = [string]`  
+        &emsp;&emsp;`first_name = [string]`  
+        &emsp;&emsp;`last_name = [string]`  
+        &emsp;&emsp;`name = [string]`  
+        &emsp;&emsp;`is_host = [boolean]`  
+        &emsp;&emsp;`date_of_bith = [date]`  
+        &emsp;&emsp;`latitude = [decimal]`  
         &emsp;&emsp;`longitude = [decimal]`
 
 * **Success Response:**
 
-  * **Code:** 200
-    **Status:** OK
-    **Message:** Success
-    **Response:** true
+  * **Code:** 200  
+    **Status:** OK  
+    **Message:** Success  
+    **Response:** true  
 
 * **Error Response:**
 
-  * **Code:** 400
-    **Status:** Bad
-    **Message:** error
-    **Response:**: `{
+  * **Code:** 400  
+    **Status:** Bad  
+    **Message:** error  
+    **Response:**  
+    `{
             errorCode : 404,
             errorMessage: "DB exception thrown"
         }`
@@ -218,12 +223,12 @@ Updates the user information.
         dataType: "json",
         data:{
             "email":"test2@company1.com",
-	        "name":"John \"Johnnie\" Doe",
-	        "first_name":"John",
-	        "last_name":"Doe Curtis",
-	        "is_host":false,
-	        "date_of_birth":"1979-06-09"
-	    },
+            "name":"John \"Johnnie\" Doe",
+            "first_name":"John",
+            "last_name":"Doe Curtis",
+            "is_host":false,
+            "date_of_birth":"1979-06-09"
+        },
         success: function(r) { console.log(r); }
     });
     ```
@@ -231,45 +236,47 @@ Updates the user information.
     
 **Create Reservation**
 ----
----
+
 Creates a reservervation between a host user and others users.
   
-* **URL**
+* **URL**  
     &emsp;api/reservation
 
-* **Method:**
+* **Method:**  
 &emsp;`POST`
   
-*  **URL Params**
+*  **URL Params**  
    &emsp;None
 
-* **Data Params**
-    &emsp;**Required:** 
-    &emsp;&emsp;`host = [integer]`\
+* **Data Params**  
+    &emsp;**Required:**   
+    &emsp;&emsp;`host = [integer]`  
     &emsp;&emsp;`guests[] = [integer]`
     
 * **Success Response:**
 
-  * **Code:** 200
-    **Status:** OK
-    **Message:** Success
-    **Response:** true
+  * **Code:** 200  
+    **Status:** OK  
+    **Message:** Success  
+    **Response:** true  
 
 * **Error Response:**
 
-  * **Code:** 400
-    **Status:** Bad
-    **Message:** error
-    **Response:**: `{
+  * **Code:** 400  
+    **Status:** Bad  
+    **Message:** error  
+    **Response:**  
+    `{
             errorCode : 404,
             errorMessage: "Unabled to create reservation, user is not host"
         }`
   
   OR
-  * **Code:** 400
-    **Status:** Bad
-    **Message:** error
-    **Response:**: `{
+  * **Code:** 400  
+    **Status:** Bad  
+    **Message:** error  
+    **Response:**  
+    `{
             errorCode : 404,
             errorMessage: "Unabled to create reservation without guests"
         }`
@@ -283,8 +290,8 @@ Creates a reservervation between a host user and others users.
         dataType: "json",
         data:{
             "host": 1,
-	        "guests": [2, 3]
-	    },
+            "guests": [2, 3]
+        },
         success: function(r) { console.log(r); },
     });
     ```
@@ -292,27 +299,27 @@ Creates a reservervation between a host user and others users.
     
 **Show User Reservations** 
 ---
----
-  Returns json data about the guests related to the user.
 
-* **URL**
+Returns json data about the guests related to the user.
+
+* **URL**  
 &emsp;api/users/:uid/guests
 
-* **Method:**
+* **Method:**  
 &emsp;`GET`
   
-*  **URL Params**
-   &emsp;**Required:**
+*  **URL Params**  
+   &emsp;**Required:**  
     &emsp;&emsp;`id=[integer]`
 
-* **Data Params**
+* **Data Params**  
   &emsp;None
 
 * **Success Response:**
-    * **Code:** 200
-    **Status:** OK
-    **Message:** Success
-    **Response:** 
+    * **Code:** 200  
+    **Status:** OK  
+    **Message:** Success  
+    **Response:**   
 `[  {
         "id": 2,
         "first_name": "Randall",
@@ -330,7 +337,7 @@ Creates a reservervation between a host user and others users.
         "reservation_id": 3,
         "user_id": 2
         }
-    },
+    }
     {
         "id": 3,
         "first_name": "Douglas",
@@ -351,10 +358,11 @@ Creates a reservervation between a host user and others users.
  
 * **Error Response:**
 
-  * **Code:** 400
-    **Status:** Bad
-    **Message:** error
-    **Response:**`{
+  * **Code:** 400  
+    **Status:** Bad  
+    **Message:** error  
+    **Response:**  
+    `{
             errorCode : 400,
             errorMessage: "Unabled to find reservations for the user"
         }`
@@ -373,34 +381,34 @@ Creates a reservervation between a host user and others users.
     
 **Delete User Reservation** 
 ---
----
   Deletes the relation between a host user and his guests in a reservation
 
-* **URL**
+* **URL**  
 &emsp;api/reservations/hosts/:uid/guests
 
-* **Method:**
+* **Method:**  
 &emsp;`DELETE`
   
-*  **URL Params**
-   &emsp;**Required:**
+*  **URL Params**  
+   &emsp;**Required:**  
     &emsp;&emsp;`id=[integer]`
 
-* **Data Params**
+* **Data Params**  
   &emsp;None
 
 * **Success Response:**
-    * **Code:** 200
-    **Status:** OK
-    **Message:** Success
+    * **Code:** 200  
+    **Status:** OK  
+    **Message:** Success  
     **Response:** true
  
 * **Error Response:**
 
-  * **Code:** 400
-    **Status:** Bad
-    **Message:** error
-    **Response:**`{
+  * **Code:** 400  
+    **Status:** Bad  
+    **Message:** error  
+    **Response:**  
+    `{
             errorCode : 400,
             errorMessage: "Unabled to delete reservations, user do not have reservations"
         }`
@@ -418,34 +426,34 @@ Creates a reservervation between a host user and others users.
   
 **Show User Recommendations** 
 ---
----
   Shows guests recommendation to users based on locations.
 
-* **URL**
+* **URL**  
 &emsp;api/users/recommendations/:uid
 
-* **Method:**
+* **Method:**  
 &emsp;`GET`
   
-*  **URL Params**
-   &emsp;**Required:**
+*  **URL Params**  
+   &emsp;**Required:**  
     &emsp;&emsp;`id=[integer]`
 
-* **Data Params**
+* **Data Params**  
   &emsp;None
 
 * **Success Response:**
-    * **Code:** 200
-    **Status:** OK
-    **Message:** Success
-    **Response:** `["uids" : [2, 3]`
+    * **Code:** 200  
+    **Status:** OK  
+    **Message:** Success  
+    **Response:**  `["uids" : [2, 3]`
  
 * **Error Response:**
 
-  * **Code:** 400
-    **Status:** Bad
-    **Message:** error
-    **Response:**`{
+  * **Code:** 400  
+    **Status:** Bad  
+    **Message:** error  
+    **Response:**  
+    `{
             errorCode : 400,
             errorMessage: "Unabled to find reservations for the user"
         }`
