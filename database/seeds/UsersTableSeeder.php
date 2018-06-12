@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Carlos',
             'last_name' => 'Garcia',
             'name' => 'CD',
-            'email' => 'carlos.garcia@bluecoding.com',
+            'email' => 'carlos.garcia@test.com',
             'date_of_birth' => date_create(),
             'is_host' => true,
             'latitude' => 18.4558292,
@@ -35,7 +35,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Randall',
             'last_name' => 'Valenciano',
             'name' => 'Valen',
-            'email' => 'rvalenciano@bluecoding.com',
+            'email' => 'rvalenciano@test.com',
             'date_of_birth' => date_create(),
             'is_host' => false,
             'latitude' => 18.482843, //Sambil latlog
@@ -47,7 +47,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Sambil',
             'last_name' => 'Sambil',
             'name' => 'Sambil',
-            'email' => 'sambil@bluecoding.com',
+            'email' => 'sambil@test.com',
             'date_of_birth' => date_create(),
             'is_host' => false,
             'latitude' => 18.482843, //Sambil latlog
@@ -59,7 +59,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Far User 1',
             'last_name' => 'Far User 1',
             'name' => 'Far User 1',
-            'email' => 'FarUser1@bluecoding.com',
+            'email' => 'FarUser1@test.com',
             'date_of_birth' => date_create(),
             'is_host' => false,
             'latitude' => 18.909438,   //Constanza latlog
@@ -71,7 +71,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => 'Far User 2',
             'last_name' => 'Far User 2',
             'name' => 'Far User 2',
-            'email' => 'FarUser2@bluecoding.com',
+            'email' => 'FarUser2@test.com',
             'date_of_birth' => date_create(),
             'is_host' => false,
             'latitude' => 18.909438,   //Constanza latlog
