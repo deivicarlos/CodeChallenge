@@ -41,8 +41,8 @@ class UserController extends Controller
                 ]
             ];
         }
-        return view('users.index', compact('users')); 
-        //response()->json($response, $response['code']);   
+        return view('users.index', compact('response')); 
+        // return response()->json($response, $response['code']);   
     }
 
     /**
@@ -63,6 +63,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        return "Create User";
         try { 
             $response = [
                 "code" => 200,
@@ -96,6 +97,7 @@ class UserController extends Controller
      */
 
     public function show($id) {
+        // return "get user";
         try { 
             $response = [
                 "code" => 200,
@@ -134,8 +136,8 @@ class UserController extends Controller
                 ]
             ];
         }
-
-        return response()->json($response, $response['code']);
+        return view('users.edit', compact('response')); 
+        // return response()->json($response, $response['code']);
     }
 
     /**
@@ -158,6 +160,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // return "Metodo Patch";
         try { 
             $response = [
                 "code" => 200,
@@ -183,7 +186,8 @@ class UserController extends Controller
             ];
         }
 
-        return response()->json($response, $response['code']);
+        return redirect('api/users'); 
+        // response()->json($response, $response['code']);
     }
 
     /**
@@ -194,6 +198,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+        return "Metodo Destroy";
         try { 
             $response = [
                 "code" => 200,

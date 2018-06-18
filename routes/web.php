@@ -26,3 +26,7 @@ Route::get('/users/{id}', function($id){
     $user = User::find($id);
     return $user;
 });
+
+Route::get('/', function() {
+    return view('welcome');
+});
