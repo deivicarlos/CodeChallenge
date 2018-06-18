@@ -41,7 +41,8 @@ class UserController extends Controller
                 ]
             ];
         }
-        return response()->json($response, $response['code']);   
+        return view('users.index', compact('users')); 
+        //response()->json($response, $response['code']);   
     }
 
     /**
