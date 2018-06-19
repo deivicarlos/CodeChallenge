@@ -198,7 +198,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        return "Metodo Destroy";
+        // return "Metodo Destroy";
         try { 
             $response = [
                 "code" => 200,
@@ -221,8 +221,8 @@ class UserController extends Controller
                 ]
             ];
         }
-
-        return response()->json($response, $response['code']);
+        return redirect('api/users');
+        // return response()->json($response, $response['code']);
     }
 
     /**

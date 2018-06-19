@@ -7,7 +7,16 @@
             <ul class="list-group">
                 @foreach($response['response'] as $user)
                     <li class="list-group-item">
-                    <a class="nav-link" href="/api/users/{{$user->id}}">{{$user->first_name." ".$user->last_name}}</a>
+                        <a class="nav-link float-left" href="/api/users/{{$user->id}}">
+                            {{$user->first_name." ".$user->last_name}}
+                        </a>
+                        {!! Form::open([
+                            'url' => 'api/users/'.$user->id, 
+                            'method' => 'DELETE', 
+                            'class' => 'float-right'
+                            ]) !!}
+                            <button class="btn btn-danger">X</button>
+                        {!! Form::close() !!}
                     </li>
                 @endforeach
             </ul>

@@ -29,7 +29,7 @@
                     {!! Form::checkbox('is_host', 1, $response['response']->is_host, ['class' => 'form-control w-auto']) !!}  
                 </div>
                 
-                <button class="btn btn-success" type="submit">Update User</button>
+                <button class="btn btn-primary" type="submit">Update User</button>
             {!! Form::close() !!}
     </div>
 @endsection
